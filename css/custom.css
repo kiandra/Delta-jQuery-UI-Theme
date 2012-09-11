@@ -1,0 +1,89 @@
+/* === GENERIC ELEMENTS == */
+body {
+  padding: 25px 0 50px 0;
+}
+.container {
+  width: 60%;
+  min-width: 500px;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+header h1 {
+  padding: 0.25em 0;
+  border-bottom: 1px solid #EEE;
+    -webkit-transition: all 150ms linear;
+    -moz-transition: all 150ms linear;
+    transition: all 150ms linear;
+}
+header .ui-toggle-switch {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+
+
+/* === DEMO SPECIFIC TWEAKS AND LAYOUT === */
+.demo h2 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin: 0 0 1em 0;
+}
+.demo {
+  padding: 2em 0 1.5em 0;
+}
+
+.demo div.ui-toggle-switch {
+  display: block;
+  padding: 0.65em 0;
+}
+#radio {
+  padding: 1em 0;
+}
+#modal {
+  display: none;
+}
+.modalDemo p {
+  color: #777;
+  width: 50%;
+}
+.modalDemo p a {
+  color: #1584DE;
+}
+#eq > span {
+  margin-right: 13px;
+  width: 7px;
+}
+.demo .ui-button {
+  vertical-align: top;
+}
+
+
+
+
+
+/* === DARK MODE === */
+body.dark {
+  background-image: url(../img/dark_wall.png);
+}
+.dark h1 {
+  color: #EEE;
+  border-bottom: 1px solid #444;
+}
+.dark h2 {
+  color: #EEE;
+}
+.dark .ui-toggle-switch label {
+  color: #FFF;
+}
+.dark .ui-toggle-switch .ui-state-active {
+  background: transparent;
+  color: #FFF;
+}
+.dark .modalDemo p {
+  color: #AAA;
+}
+  .dark .modalDemo p a {
+    color: #50b1ff;
+  }
