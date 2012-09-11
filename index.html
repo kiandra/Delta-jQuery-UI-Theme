@@ -1,74 +1,140 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Raven - The Free jQuery UI Theme from Kiandra IT</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/normalise.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="theme/jquery-ui.css">
+  <script src="js/modernizr-2.0.6.min.js"></script>
+</head>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Raven-jquery-ui-theme : " />
+<body>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <header class="container">
 
-    <title>Raven-jquery-ui-theme</title>
-  </head>
+    <h1>Raven Theme</h1>
 
-  <body>
+    <select id="colourMode">
+      <option>Light</option>
+      <option>Dark</option>
+    </select>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/kiandra/Raven-jQuery-UI-Theme">View on GitHub</a>
+  </header>
 
-          <h1 id="project_title">Raven-jquery-ui-theme</h1>
-          <h2 id="project_tagline"></h2>
+  <div class="container">
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/kiandra/Raven-jQuery-UI-Theme/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/kiandra/Raven-jQuery-UI-Theme/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+    <div class="demo">
+
+      <h2>Toggle Switch</h2>
+
+      <select data-highlight="true">
+        <option>On</option>
+        <option>Off</option>
+      </select>
+
+      <select data-highlight="false">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+    <div class="demo">
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Raven-jquery-ui-theme maintained by <a href="https://github.com/kiandra">kiandra</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+      <h2>Button Styles</h2>
     
+      <button>&lt;button&gt;</button>
+      
+      <input type="button" value="&lt;input type='button'&gt;">
+      
+      <input type="submit" value="&lt;input type='submit'&gt;">
 
-  </body>
+      <div>
+        <div id="radio">
+          <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
+          <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
+          <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="demo">
+      <h2>EQ Slider Demo</h2>
+      <div id="eq">
+        <span>88</span>
+        <span>77</span>
+        <span>55</span>
+        <span>33</span>
+        <span>40</span>
+        <span>45</span>
+        <span>70</span>
+      </div>
+    </div>
+
+    <div class="demo modalDemo">
+      <h2>Modal Dialogs</h2>
+      <p>The auto-detection of operating system and placement of close 'x' and dialog buttons is dependent upon a Modernizr test &mdash; <a href="http://taitems.github.com/UX-Lab/OSCloseButtons/index.html" target="_blank">more information</a>.</p>
+      <button class="modalAuto">Launch Auto</button>
+      <button class="modalMac">Launch Mac</button>
+      <button class="modalWindows">Launch Windows</button>
+    </div>
+
+    <div class="demo">
+      <h2>Datepicker</h2>
+      <input type="text" class="datepicker" />
+    </div>
+
+    <div class="demo">
+
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Nunc tincidunt</a></li>
+          <li><a href="#tabs-2">Proin dolor</a></li>
+          <li><a href="#tabs-3">Aenean lacinia</a></li>
+        </ul>
+        <div id="tabs-1">
+          <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+        </div>
+        <div id="tabs-2">
+          <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+        </div>
+        <div id="tabs-3">
+          <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+          <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="modal">
+    Something
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+  <script src="js/jquery-ui.toggleSwitch.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34727434-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+</body>
 </html>
