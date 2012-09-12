@@ -532,7 +532,8 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-tabs .ui-tabs-hide { display: none !important; }
 
 /* radius reset */
-.ui-tabs, .ui-tabs .ui-tabs-nav, .ui-tabs .ui-tabs-nav > li, .ui-tabs-panel { border-color: #e5e5e5; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.ui-tabs, .ui-tabs .ui-tabs-nav, .ui-tabs-panel { border-color: #e5e5e5; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.ui-tabs .ui-tabs-nav > li { -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; }
 
 /*
  * jQuery UI Datepicker 1.8.16
@@ -622,6 +623,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 }
 .ui-datepicker-current-day a {
 	background: #20a8fe !important;
+	filter: none !important;
 	color: #FFF !important;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25) !important;
 		-webkit-box-shadow: 0 0 7px #022a44 inset !important;
