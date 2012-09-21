@@ -1,4 +1,4 @@
-/*global $, Modernizr*/
+/*global $, Modernizr, jQuery*/
 
 $(function() {
 
@@ -9,6 +9,8 @@ $(function() {
 		return (strIndex > -1);
 	});
 
+	// PRELOAD DARK BG + MODAL CLOSE
+	$.imgpreload(['img/dark_wall.png', 'theme/images/modalClose.png']);
 
 	// GENERIC JQUERY UI SETUP
 	$("button, :button, :submit").button();
