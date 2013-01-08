@@ -460,6 +460,13 @@ input.ui-button { height: 30px !important; padding: .4em 1em; }
 /*button sets*/
 .ui-buttonset { margin-right: 7px; }
 .ui-buttonset .ui-button { margin-left: 0; margin-right: -.325em; }
+.ui-buttonset .ui-button.ui-state-active { border-color: #144c71; background: #0a54a5 none; top: 0; }
+.ui-buttonset .ui-button.ui-state-active { 
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(12, 106, 106, 0.5) inset !important;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(12, 106, 106, 0.5) inset !important;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(12, 106, 106, 0.5) inset !important;
+}
+.ui-buttonset .ui-button.ui-state-active span { text-shadow: 0 -1px 0 rgba(0,0,0,0.35); }
 
 /* workarounds */
 button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */
@@ -589,10 +596,10 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 }
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 9px; width: 16px; height: 16px; cursor: pointer; }
 .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 9px; }
-.ui-datepicker .ui-datepicker-prev { left:2px; }
-.ui-datepicker .ui-datepicker-next { right:2px; }
-.ui-datepicker .ui-datepicker-prev-hover { left:1px; }
-.ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.ui-datepicker .ui-datepicker-prev { left: 2px; }
+.ui-datepicker .ui-datepicker-next { right: 2px; }
+.ui-datepicker .ui-datepicker-prev-hover { left: 2px; }
+.ui-datepicker .ui-datepicker-next-hover { right: 2px; }
 .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
 .ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; color: #e8e9ea; text-shadow: 0 -1px 0 rgba(0,0,0,0.4); }
 .ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
@@ -664,8 +671,8 @@ td.ui-datepicker-unselectable {
 .ui-datepicker-rtl { direction: rtl; }
 .ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
 .ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
-.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
-.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 2px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 2px; right: auto; }
 .ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
 .ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
 .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
@@ -693,8 +700,17 @@ td.ui-datepicker-unselectable {
  *
  * http://docs.jquery.com/UI/Progressbar#theming
  */
-.ui-progressbar { height:2em; text-align: left; }
-.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }
+.ui-progressbar { height: 10px; text-align: left; border: 0 none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; background: #333; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.35) inset, 0 1px 0 rgba(255,255,255,0.15); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.35) inset, 0 1px 0 rgba(255,255,255,0.15); box-shadow: 0 1px 3px rgba(0,0,0,0.35) inset, 0 1px 0 rgba(255,255,255,0.15); }
+.ui-progressbar .ui-progressbar-value { margin: -1px; height:100%; border: 0 none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.ui-progressbar .ui-progressbar-value {
+	background: #27abff; /* Old browsers */
+	background: -moz-linear-gradient(top, #27abff 0%, #059eff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#27abff), color-stop(100%,#059eff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #27abff 0%,#059eff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #27abff 0%,#059eff 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #27abff 0%,#059eff 100%); /* IE10+ */
+	background: linear-gradient(top, #27abff 0%,#059eff 100%); /* W3C */
+}
 
 
 
@@ -720,7 +736,6 @@ select.ui-toggle-switch { display: none; }
 	color: #FFF;
 	padding: 6px 12px;
 	font-size: 12px;
-	text-shadow: 0 -1px 0 #1584de !important;
 	box-shadow: 0 1px 0 #53bcff inset, 0 1px 2px rgba(0,0,0,0.2) !important;
 		background: #27abff; /* Old browsers */
 		background: -moz-linear-gradient(top, #27abff 0%, #059eff 100%); /* FF3.6+ */
@@ -733,9 +748,11 @@ select.ui-toggle-switch { display: none; }
 			-moz-transition: none;
 			-o-transition: none;
 }
-.ui-button:hover, button.ui-button.ui-state-hover {
+	.ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span {
+		text-shadow: 0 -1px 0 #1584de;
+	}
+.ui-button:hover, button.ui-button.ui-state-hover, .ui-button.ui-state-hover {
 	border: 1px solid #0c6aa6;
-	text-shadow: 0 -1px 0 #117cc0 !important;
 	box-shadow: 0 1px 0 #58b3ff inset, 0 1px 2px rgba(0,0,0,0.2) !important;
 		background: #279cff; /* Old browsers */
 		background: -moz-linear-gradient(top, #279cff 0%, #058dff 100%); /* FF3.6+ */
@@ -745,11 +762,13 @@ select.ui-toggle-switch { display: none; }
 		background: -ms-linear-gradient(top, #279cff 0%,#058dff 100%); /* IE10+ */
 		background: linear-gradient(top, #279cff 0%,#058dff 100%); /* W3C */
 }
-.ui-button:active, button.ui-button.ui-state-active {
+	.ui-button:hover, .ui-button:hover span, button.ui-button.ui-state-hover span {
+		text-shadow: 0 -1px 0 #117cc0;
+	}
+.ui-button:active, button.ui-button.ui-state-active, .ui-button.ui-state-active {
 	border: 1px solid #0c6aa6;
 	position: relative;
 	top: 1px;
-	text-shadow: 0 1px 0 #117cc0 !important;
 	box-shadow: 0 2px 2px rgba(12,106,106,0.5) inset, 0 1px 2px rgba(0,0,0,0.2) !important;
 		background: #058dff; /* Old browsers */
 		background: -moz-linear-gradient(top, #058dff 0%, #279cff 100%); /* FF3.6+ */
@@ -759,7 +778,11 @@ select.ui-toggle-switch { display: none; }
 		background: -ms-linear-gradient(top, #058dff 0%,#279cff 100%); /* IE10+ */
 		background: linear-gradient(top, #058dff 0%,#279cff 100%); /* W3C */
 }
-.ui-button:focus, button.ui-button.ui-state-focus {
+	.ui-button:active, .ui-button:active span, button.ui-button.ui-state-active span {
+		text-shadow: 0 -1px 0 #117cc0;
+	}
+.ui-button:focus,
+button.ui-button.ui-state-focus {
 	border-color: #0f669d;
 	color: #FFF !important;
 	text-shadow: 0 -1px 0 #216ea6 !important;
